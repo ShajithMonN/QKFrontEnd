@@ -31,7 +31,7 @@ export class HomePageService {
     pay={cardNumber:CardNumber1,CVV:cvv1,Expiry:ex,ProdCost:cost,ProdID:pid}
     console.log(pay)
 
-    let tempVar = this.http.post<boolean>('http://localhost:7181/api/PaymentFunction',pay)
+    let tempVar = this.http.post<boolean>('https://payment12.azurewebsites.net/api/PaymentFunction',pay)
     return tempVar
   }
 
